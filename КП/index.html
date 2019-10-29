@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="style_main.css" media="all">
+    <link rel="stylesheet" href="style_Menu.css" media="all" />
+    <link rel="stylesheet" href="style_autorizate.css" media="all">
+
+</head>
+
+<body class="main">
+    <!-- учился и писал первую команду с кнопочкой <input type="button" value="Нажми меня" id="elem">-->
+    <!--------------------------------------ГЛАВНОЕ МЕНЮ САЙТА----------------------------------------------------->
+    <nav>
+        <ul>
+            <li><a href="index.hml" class="current">Главная</a></li>
+            <li><a href="#">Настройки</a></li>
+            <li><a href="#">Обратная связь</a></li>
+            <li><a href="best_footbal_player.html">Лучшие футболисты планеты</a></li>
+            <!--Изменить картину авторизации-->
+            <li><input type="image" src="login_img.png " onclick="document.getElementById('modal_form_autorization').style.display='block'"> </li>
+            <!------------>
+        </ul>
+    </nav>
+    <p>
+
+        <!--------------------------------------МОДАЛЬНАЯ ФОРМА АВТОРИЗАЦИИ----------------------------------------------------->
+        <div id="modal_form_autorization" class="modal">
+
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('modal_form_autorization').style.display='none'" class="close" title="Close Modal">×</span>
+                    <img src="avatar.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Логин</b></label>
+                    <input type="text" placeholder="Введите логин" name="uname" required>
+
+                    <label for="psw"><b>Пароль</b></label>
+                    <input type="password" placeholder="Введите пароль" name="psw" required>
+
+
+                    <div class="bt_reg_come_in">
+                        <div style="float:left"><button type="submit">Войти</button></div>
+
+                        <div style="float: right"><button type="button" id="registration">Регистрация</button></div>
+                    </div>
+                    <label>
+                <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+              </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('modal_form_autorization').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"> <a href="#">Забыли пароль?</a></span>
+                </div>
+            </form>
+        </div>
+        <!-- -----------------------------------МОДАЛЬНАЯ ФОРМА РЕГИСТРАЦИИ----------------------------------------------------->
+        <div id="modal_form_registration" class="modal">
+
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('modal_form_registration').style.display='none'" class="close" title="Закрыть">×</span>
+                    <img src="avatar.png" alt="Avatar" class="avatar"><input type="file" multiple accept="image/*">
+
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Логин</b></label>
+                    <input type="text" placeholder="Введите логин" name="uname" required minlength="8" maxlength="25">
+                    <label for="psw"><b>Пароль</b></label>
+                    <input type="password" placeholder="Введите пароль" name="psw" required minlength="8" maxlength="25">
+
+                    <label for="mob_phone"> <b>Мобильный телефон</b></label>
+                    <!-- разобраться как через скрипты вводить телефон-->
+                    <input type="tel" placeholder="+7 (---)(---)(----)" name="tel" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Введите email" name="Email" required>
+                    <br>
+                    <br>
+                    <label> День рождения <input type="date"></label>
+                    <div><button type="submit">Зарегистрироваться</button></div>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('modal_form_registration').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"> <a href="#">Забыли пароль?</a></span>
+                </div>
+            </form>
+        </div>
+    </p>
+
+    <script>
+        //первая кнопка 
+        elem.onclick = function(event) {
+            // вывести тип события, элемент и координаты клика
+            alert("Helo world" + event);
+
+            alert(event.type + " на " + event.currentTarget);
+            alert(event.clientX + ":" + event.clientY);
+        }
+    </script>
+
+    <script>
+        //первая кнопка 
+        //debugger;
+        registration.onclick = function(event) {
+
+            var form_autorization;
+            var form_registration;
+
+            form_autorization = document.getElementById('modal_form_autorization');
+            form_registration = document.getElementById('modal_form_registration');
+
+            if (form_autorization.style.display === "block") {
+                form_autorization.style.display = 'none'
+                form_registration.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

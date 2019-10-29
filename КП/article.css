@@ -1,0 +1,49 @@
+h1 {
+    color: #03235e;
+    text-align: center;
+    margin: 28px 0 14px 0;
+}
+
+.footbal_img {
+    text-align: center;
+    border: 1px solid rgb(186, 189, 13);
+    border-radius: 20px;
+    height: 50%;
+    width: 50%;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.author {
+    color: rgb(20, 18, 129);
+}
+
+.date_life {
+    color: rgb(20, 18, 129);
+    background: none;
+    border: none;
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(0, 0, 0)
+}
+
+div p {
+    background: burlywood;
+    text-align: center;
+    color: black;
+    border: 1px solid rgb(186, 189, 13);
+    box-sizing: content-box;
+}
+
+.link_page_ist {
+    text-align: center;
+    border: 1px solid black;
+    background: burlywood;
+    width: 5%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
