@@ -5,7 +5,6 @@
     }
     
     nav ul {
-        margin: 80px 0 20px 0;
         padding: .7em;
         float: left;
         list-style: none;
@@ -43,4 +42,13 @@
         display: block;
         max-width: 70%;
         margin: 0 auto;
+    }
+    
+    .until_submenu:hover>.submenu {
+        display: block;
+        float: none;
+    }
+    
+    .submenu {
+        display: none;
     }

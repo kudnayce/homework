@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="style_main.css" media="all">
     <link rel="stylesheet" href="style_Menu.css" media="all" />
     <link rel="stylesheet" href="style_autorizate.css" media="all">
-
 </head>
 
 <body class="main">
-    <!-- учился и писал первую команду с кнопочкой <input type="button" value="Нажми меня" id="elem">-->
     <!--------------------------------------ГЛАВНОЕ МЕНЮ САЙТА----------------------------------------------------->
     <nav>
         <ul>
-            <li><a href="index.hml" class="current">Главная</a></li>
-            <li><a href="#">Настройки</a></li>
+            <li><a href="index.html" class="current">Главная</a></li>
+            <li class="until_submenu"><a href="#">Все продукты</a>
+                <ul class="submenu">
+                    <li><a href="#">Интеграции</a> </li>
+                </ul>
+            </li>
+
+            <li class="until_submenu"><a href="#">Настройки</a>
+                <ul class="submenu">
+                    <li><a href="#">Профиль компании</a> </li>
+                </ul>
+            </li>
             <li><a href="#">Обратная связь</a></li>
             <li><a href="best_footbal_player.html">Лучшие футболисты планеты</a></li>
+
             <!--Изменить картину авторизации-->
             <li><input type="image" src="login_img.png " onclick="document.getElementById('modal_form_autorization').style.display='block'"> </li>
             <!------------>
@@ -36,11 +45,11 @@
                 </div>
 
                 <div class="container">
-                    <label for="uname"><b>Логин</b></label>
-                    <input type="text" placeholder="Введите логин" name="uname" required>
+                    <label><b>Логин</b></label>
+                    <input type="text" placeholder="Введите логин" required>
 
-                    <label for="psw"><b>Пароль</b></label>
-                    <input type="password" placeholder="Введите пароль" name="psw" required>
+                    <label><b>Пароль</b></label>
+                    <input type="password" placeholder="Введите пароль" required>
 
 
                     <div class="bt_reg_come_in">
@@ -49,7 +58,7 @@
                         <div style="float: right"><button type="button" id="registration">Регистрация</button></div>
                     </div>
                     <label>
-                <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+                <input type="checkbox" checked="checked"> Запомнить меня
               </label>
                 </div>
 
@@ -70,17 +79,17 @@
                 </div>
 
                 <div class="container">
-                    <label for="uname"><b>Логин</b></label>
-                    <input type="text" placeholder="Введите логин" name="uname" required minlength="8" maxlength="25">
-                    <label for="psw"><b>Пароль</b></label>
-                    <input type="password" placeholder="Введите пароль" name="psw" required minlength="8" maxlength="25">
+                    <label><b>Логин</b></label>
+                    <input type="text" placeholder="Введите логин" required minlength="8" maxlength="25">
+                    <label><b>Пароль</b></label>
+                    <input type="password" placeholder="Введите пароль" required minlength="8" maxlength="25">
 
                     <label for="mob_phone"> <b>Мобильный телефон</b></label>
                     <!-- разобраться как через скрипты вводить телефон-->
-                    <input type="tel" placeholder="+7 (---)(---)(----)" name="tel" required>
+                    <input type="tel" placeholder="+7 (---)(---)(----)" required>
 
-                    <label for="email"><b>Email</b></label>
-                    <input type="email" placeholder="Введите email" name="Email" required>
+                    <label><b>Email</b></label>
+                    <input type="email" placeholder="Введите email" required>
                     <br>
                     <br>
                     <label> День рождения <input type="date"></label>
@@ -95,20 +104,8 @@
         </div>
     </p>
 
-    <script>
-        //первая кнопка 
-        elem.onclick = function(event) {
-            // вывести тип события, элемент и координаты клика
-            alert("Helo world" + event);
-
-            alert(event.type + " на " + event.currentTarget);
-            alert(event.clientX + ":" + event.clientY);
-        }
-    </script>
 
     <script>
-        //первая кнопка 
-        //debugger;
         registration.onclick = function(event) {
 
             var form_autorization;
